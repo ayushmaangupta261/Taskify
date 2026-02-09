@@ -1,7 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 // Load persisted user from localStorage
-const storedUser = JSON.parse(localStorage.getItem("taskify_user"));
+const storedUser = localStorage.getItem("taskify_user")
+  ? JSON.parse(localStorage.getItem("taskify_user"))
+  : null;
+
 
 const initialState = {
   // Determine auth state based on stored user

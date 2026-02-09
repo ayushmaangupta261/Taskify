@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import AdminDashboard from "../pages/admin/AdminDashboard";
 import RestrictedRoute from "../components/authComponent/RestrictedRoute";
 import UserDashboard from "../pages/user/UserDashboard";
+import DefaultRedirect from "../pages/DefaultRedirect";
 
 export default function AppRoutes() {
   return (
@@ -28,6 +29,9 @@ export default function AppRoutes() {
           }
         />
       </Route>
+
+      {/* Catch all unmatched routes */}
+      <Route path="*" element={<DefaultRedirect />} />
     </Routes>
   );
 }

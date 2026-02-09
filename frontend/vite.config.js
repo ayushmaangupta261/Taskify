@@ -13,6 +13,11 @@ export default defineConfig({
         changeOrigin: true,
         secure: false
       }
-    }
+    },
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, 'src'),
+      },
+    },
   }
 });

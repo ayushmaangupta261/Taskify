@@ -22,8 +22,10 @@ const app = express();
 
 // Register global middlewares
 app.use(cors({
-  origin: "http://localhost:3000",
-  credentials: true
+  origin: [
+    "http://localhost:3000",
+    "https://taskify-frontend-nbik.onrender.com"
+  ], credentials: true
 }));
 app.use(express.json());
 app.use(cookieParser());
